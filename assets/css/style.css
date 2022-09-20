@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+}
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid red;
+}
+.dashboard {
+    width: 100%;
+}
+
+.dashboard #menus {
+    text-align: center;
+}
+
+.dashboard #actions {
+    text-align: center;
+}
