@@ -1,0 +1,1110 @@
+{
+	"info": {
+		"_postman_id": "a053426c-c234-4c38-af3d-e6057d79e62f",
+		"name": "Time Tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{host}}/api.php/api/v1/user",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api.php",
+										"api",
+										"v1",
+										"user"
+									]
+								}
+							},
+							"status": "User found.",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Jan 2022 06:29:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1l PHP/7.4.23"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Content-Length",
+									"value": "413"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": \"1\",\n        \"email\": \"test@test.com\",\n        \"first_name\": \"Masoud\",\n        \"last_name\": \"Ilderemi Lotf-Abad\",\n        \"password\": \"40bd001563085fc35165329ea1ff5c5ecbdbbeef\",\n        \"created\": \"2022-01-01 14:50:02\",\n        \"modified\": \"2022-01-01 14:50:02\",\n        \"status\": \"1\",\n        \"active_token\": \"334de425733afcb2ffab4ee12a7e3fdfd1f5bf02\",\n        \"last_login\": \"2022-01-02 17:01:00\"\n    },\n    \"message\": \"User found.\",\n    \"data_hash\": \"84e8dee61c690f12c2a4e25451abf573b0f22a08\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"new_user@test.com\",\r\n    \"first_name\":\"user1_firstname\",\r\n    \"last_name\":\"user1_lastname\",\r\n    \"password\":\"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"Masoud\",\r\n    \"last_name\":\"Ilderemi Lotf-Abad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Get All Prjects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/project",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"project"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Prjects",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{host}}/api.php/api/v1/project",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api.php",
+										"api",
+										"v1",
+										"project"
+									]
+								}
+							},
+							"status": "Records were found.",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Jan 2022 06:29:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1l PHP/7.4.23"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1187"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"0\": {\n            \"id\": \"12\",\n            \"name\": \"project3\",\n            \"user_id\": \"1\",\n            \"created\": \"2022-01-02 15:47:32\",\n            \"modified\": \"2022-01-02 15:47:32\",\n            \"status\": \"1\",\n            \"duration\": 0,\n            \"duration_formated\": \"00:00:00\"\n        },\n        \"1\": {\n            \"id\": \"11\",\n            \"name\": \"project2\",\n            \"user_id\": \"1\",\n            \"created\": \"2022-01-02 15:47:32\",\n            \"modified\": \"2022-01-02 15:47:32\",\n            \"status\": \"1\",\n            \"duration\": 0,\n            \"duration_formated\": \"00:00:00\"\n        },\n        \"2\": {\n            \"id\": \"10\",\n            \"name\": \"project1\",\n            \"user_id\": \"1\",\n            \"created\": \"2022-01-02 15:47:32\",\n            \"modified\": \"2022-01-02 15:47:32\",\n            \"status\": \"1\",\n            \"duration\": 0,\n            \"duration_formated\": \"00:00:00\"\n        },\n        \"3\": {\n            \"id\": \"2\",\n            \"name\": \"My Test Project 2\",\n            \"user_id\": \"1\",\n            \"created\": \"2022-01-01 14:51:20\",\n            \"modified\": \"2022-01-01 14:51:20\",\n            \"status\": \"1\",\n            \"duration\": 0,\n            \"duration_formated\": \"00:00:00\"\n        },\n        \"4\": {\n            \"id\": \"1\",\n            \"name\": \"test_project\",\n            \"user_id\": \"1\",\n            \"created\": \"2022-01-01 14:51:20\",\n            \"modified\": \"2022-01-01 14:51:20\",\n            \"status\": \"1\",\n            \"duration\": \"28800\",\n            \"duration_formated\": \"08:00:00\"\n        },\n        \"5\": {\n            \"id\": \"1\",\n            \"name\": \"test_project\",\n            \"user_id\": \"1\",\n            \"created\": \"2022-01-01 14:51:20\",\n            \"modified\": \"2022-01-01 14:51:20\",\n            \"status\": \"1\",\n            \"duration\": \"7200\",\n            \"duration_formated\": \"02:00:00\"\n        },\n        \"total_time\": \"10:00:00\",\n        \"count\": 7\n    },\n    \"message\": \"Records were found.\",\n    \"data_hash\": \"534bd084b25935464c15b1d1f2f527b552f94520\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get A Project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/project/1",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"project",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get A Project",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{host}}/api.php/api/v1/project/1",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api.php",
+										"api",
+										"v1",
+										"project",
+										"1"
+									]
+								}
+							},
+							"status": "Records were found.",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Jan 2022 06:30:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1l PHP/7.4.23"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Content-Length",
+									"value": "499"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"0\": {\n            \"id\": \"1\",\n            \"name\": \"test_project\",\n            \"user_id\": \"1\",\n            \"created\": \"2022-01-01 14:51:20\",\n            \"modified\": \"2022-01-01 14:51:20\",\n            \"status\": \"1\",\n            \"duration\": \"28800\",\n            \"duration_formated\": \"08:00:00\"\n        },\n        \"1\": {\n            \"id\": \"1\",\n            \"name\": \"test_project\",\n            \"user_id\": \"1\",\n            \"created\": \"2022-01-01 14:51:20\",\n            \"modified\": \"2022-01-01 14:51:20\",\n            \"status\": \"1\",\n            \"duration\": \"7200\",\n            \"duration_formated\": \"02:00:00\"\n        },\n        \"total_time\": \"10:00:00\",\n        \"count\": 3\n    },\n    \"message\": \"Records were found.\",\n    \"data_hash\": \"990be49115afb69068b842bd7b8eb7e5e1772e8f\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"my test prj2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/project",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"My Test Project 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/project/5",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"project",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Time",
+			"item": [
+				{
+					"name": "Get All Times",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/time",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"time"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Times",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{host}}/api.php/api/v1/time",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api.php",
+										"api",
+										"v1",
+										"time"
+									]
+								}
+							},
+							"status": "Records were found.",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Jan 2022 06:30:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1l PHP/7.4.23"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Content-Length",
+									"value": "289"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"0\": {\n            \"id\": \"2\",\n            \"start_time\": \"2022-01-02 12:00:00\",\n            \"end_time\": \"2022-01-02 14:00:00\",\n            \"user_id\": \"1\",\n            \"project_id\": \"1\",\n            \"note\": null,\n            \"status\": null,\n            \"duration\": \"2 Hours 0 Minutes\"\n        },\n        \"count\": 1\n    },\n    \"message\": \"Records were found.\",\n    \"data_hash\": \"8c87352358f4ec1f3d5d17102984a166b81a244f\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Time",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"start_time\": \"2022-01-01 11:43:23\",\r\n    \"end_time\": \"2022-01-01 11:45:23\",\r\n    \"project_id\":\"1\",\r\n    \"note\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/time",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Time",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"start_time\": \"2021-01-02 11:43:23\",\r\n    \"end_time\": \"2021-01-02 11:45:23\",\r\n    \"project_id\":\"1\",\r\n    \"note\":\"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/time/10",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"time",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sheet",
+									"type": "file",
+									"src": "/C:/Users/ildrm/Desktop/file.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/upload",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"upload"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sheet",
+											"type": "file",
+											"src": "/C:/Users/ildrm/Desktop/file.csv"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{host}}/api.php/api/v1/upload",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api.php",
+										"api",
+										"v1",
+										"upload"
+									]
+								}
+							},
+							"status": "File successfully uploaded.",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Jan 2022 06:30:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1l PHP/7.4.23"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Content-Length",
+									"value": "131"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"size\": \"135 B\"\n    },\n    \"message\": \"File successfully uploaded.\",\n    \"data_hash\": \"fac9d1a451b28dc78eae336987a630c46f641260\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Peak",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/time/2022-01-02/1",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"time",
+								"2022-01-02",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Peak",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{host}}/api.php/api/v1/time/2022-01-02/1",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api.php",
+										"api",
+										"v1",
+										"time",
+										"2022-01-02",
+										"1"
+									]
+								}
+							},
+							"status": "Records were found.",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 03 Jan 2022 06:30:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1l PHP/7.4.23"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.23"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "OPTIONS,GET,POST,PUT,DELETE"
+								},
+								{
+									"key": "Access-Control-Max-Age",
+									"value": "3600"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Content-Length",
+									"value": "438"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"peaks\": [\n            {\n                \"hour\": \"12\",\n                \"records\": \"2\"\n            },\n            {\n                \"hour\": \"13\",\n                \"records\": \"2\"\n            },\n            {\n                \"hour\": \"14\",\n                \"records\": \"2\"\n            },\n            {\n                \"hour\": \"8\",\n                \"records\": \"1\"\n            },\n            {\n                \"hour\": \"9\",\n                \"records\": \"1\"\n            },\n            {\n                \"hour\": \"10\",\n                \"records\": \"1\"\n            },\n            {\n                \"hour\": \"11\",\n                \"records\": \"1\"\n            },\n            {\n                \"hour\": \"15\",\n                \"records\": \"1\"\n            },\n            {\n                \"hour\": \"16\",\n                \"records\": \"1\"\n            }\n        ],\n        \"users\": [\n            {\n                \"user_id\": \"2\",\n                \"records\": \"9\"\n            },\n            {\n                \"user_id\": \"1\",\n                \"records\": \"3\"\n            }\n        ]\n    },\n    \"message\": \"Records were found.\",\n    \"data_hash\": \"ad5a151f12af4f4f9c56d20f813779b89e3d5e94\"\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Login By Email and Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3f4bde23259119117f4a509513c4efcd6f5250db",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/api.php/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api.php",
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login By Email and Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"status": "Successfully logged in.",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 03 Jan 2022 06:30:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1l PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "OPTIONS,GET,POST,PUT,DELETE"
+						},
+						{
+							"key": "Access-Control-Max-Age",
+							"value": "3600"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+						},
+						{
+							"key": "Content-Length",
+							"value": "163"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"token\": \"202c6c085902fcadc3862b7300aee190889bd4f4\"\n    },\n    \"message\": \"Successfully logged in.\",\n    \"data_hash\": \"205f817b4cb17d83d7262d61e4799cd6bc434275\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Load HTML Pages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"page\":\"dashboard\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}/api.php/api/v1/html",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api.php",
+						"api",
+						"v1",
+						"html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/api.php/api/v1/logout",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api.php",
+						"api",
+						"v1",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Logout",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}/api.php/api/v1/logout",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api.php",
+								"api",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"status": "User has been logged out.",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 03 Jan 2022 06:34:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.48 (Win64) OpenSSL/1.1.1l PHP/7.4.23"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.23"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "OPTIONS,GET,POST,PUT,DELETE"
+						},
+						{
+							"key": "Access-Control-Max-Age",
+							"value": "3600"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+						},
+						{
+							"key": "Content-Length",
+							"value": "115"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"User has been logged out.\",\n    \"data_hash\": \"97d170e1550eee4afc0af065b78cda302a97674c\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "23cc159ae137cc52eb70373c014bed0d61debe69",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost"
+		}
+	]
+}
